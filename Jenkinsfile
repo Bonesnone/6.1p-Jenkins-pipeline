@@ -22,6 +22,14 @@ pipeline {
                 echo 'Unit tests'
                 echo 'Integration tests'
             }
+            post {
+                success {
+                    echo 'success!'
+                    mail to: "s222134604@gmail.com"
+                    subject: "Build status successful!"
+                    body: "Congratulations, build ${BUILD_NUMBER} has passed testing inspection."
+                }
+            }
         }
         stage('3: Code Analysis') {
             steps {
@@ -37,6 +45,14 @@ pipeline {
                     projectName: '%{PROJECT_NAME}',
                     failOnError
                 )
+            }
+            post {
+                success {
+                    echo 'success!'
+                    mail to: "s222134604@gmail.com"
+                    subject: "Build status successful!"
+                    body: "Congratulations, build ${BUILD_NUMBER} has passed security requirements."
+                }
             }
         }
         stage('5: Deploy to staging server') {
