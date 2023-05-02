@@ -4,12 +4,12 @@ This was created by Jye Floreani for the SIT223 6.1p github/jenkins integration 
 Requires Docker and JMeter installed on both developer and Jenkins server
 
 ### Setting up your own Jenkins server
-Once you have a Jenkins build server running, install the following plugins:
-(Build tools) Maven\n
-(Unit and integration test) Performance plugin (to interface with JMeter)\n
-(Code analysis) Fortifyn
-(Security analysis) SNYK\n
-(Deployment) Docker\n
+Once you have a Jenkins build server running, install the following plugins:<br />
+(Build tools) Maven<br />
+(Unit and integration test) Performance plugin (to interface with JMeter)<br />
+(Code analysis) Fortify<br />
+(Security analysis) SNYK<br />
+(Deployment) Docker<br />
 With all of these installed, enable and restart. Copy the git repository SCM to replicate the Jenkinsfile, and you're ready to start development!
 
 ### Project Structure
