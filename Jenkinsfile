@@ -24,7 +24,7 @@ pipeline {
             }
             post {
                 success {
-                    echo 'success!'
+                    echo 'success! email sent.'
                     mail to: "s222134604@gmail.com"
                     subject: "Build status successful!"
                     body: "Congratulations, build ${BUILD_NUMBER} has passed testing inspection."
@@ -48,7 +48,7 @@ pipeline {
             }
             post {
                 success {
-                    echo 'success!'
+                    echo 'success! email sent.'
                     mail to: "s222134604@gmail.com"
                     subject: "Build status successful!"
                     body: "Congratulations, build ${BUILD_NUMBER} has passed security requirements."
